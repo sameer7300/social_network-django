@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="static\images\logo.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="{% static 'style/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'style/animations.css' %}" />
+    <link rel="stylesheet" href="{% static 'style/ripple.css' %}" />
+    <link rel="stylesheet" href="{% static 'style/theme.css' %}" />
+    <link rel="stylesheet" href="{% static 'style/room-animations.css' %}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <title>Persona - Find discussion partners around the world!</title>
+  </head>
+
+  <body class="dark-theme">
+ 
+    {% include 'navbar.html' %}
+
+    {% if messages %}
+    <ul class="message">
+        {% for message in messages %}
+        <li>{{message}}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% block content %}
+    {% endblock %}
+
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/animations.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script>
+    <script src="{% static 'js/floating-button.js' %}"></script>
+    <script src="{% static 'js/room-enhancements.js' %}"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

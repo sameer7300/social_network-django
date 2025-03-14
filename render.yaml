@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: persona
+    env: python
+    buildCommand: "./build.sh"
+    startCommand: "gunicorn persona.wsgi:application"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.3
+      - key: DEBUG
+        value: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: ALLOWED_HOSTS
+        sync: false
+      - key: DATABASE_URL
+        sync: false 
