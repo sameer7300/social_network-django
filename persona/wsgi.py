@@ -1,5 +1,5 @@
 """
-WSGI config for studbuddy project.
+WSGI config for persona project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'studbuddy.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'persona.settings')
 
 application = get_wsgi_application()
