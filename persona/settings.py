@@ -31,7 +31,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-s%+7-%@1!@-dx_x)t7n02
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False').lower() == 'true'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '*').split(',')
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "social-network-django-6shf.onrender.com,localhost,127.0.0.1").split(',')
+
 
 
 # Application definition
